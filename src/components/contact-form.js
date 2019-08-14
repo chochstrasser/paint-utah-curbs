@@ -1,4 +1,5 @@
 import React from "react";
+import "./contact-form.css";
 
 const ContactForm = ({ handleOnClick }) => {
   return (
