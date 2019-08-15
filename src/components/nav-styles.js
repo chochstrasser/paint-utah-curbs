@@ -9,58 +9,12 @@ export const StyledNav = styled.nav`
   backface-visibility: hidden;
 `;
 
-export const Burger = styled.div`
-  height: 15vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  background: #2b3033;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-`;
-
-export const BurgerPatty = styled.div`
-  position: relative;
-  height: 2px;
-  width: 40px;
-  background: white;
-  will-change: transform;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  &:before,
-  &:after {
-    will-change: transform;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: white;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background: white;
-  }
-`;
-
 export const NavList = styled.ul`
   display: flex;
   flex-flow: column wrap;
-  height: 85vh;
-  transform: translate(0, -100%);
+  height: 99.8vh;
+  margin: 0;
+  transform: translate(0, 0);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &.active {
@@ -71,6 +25,8 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   flex: 1;
   position: relative;
+  list-style: none;
+  right: 2.5rem;
 `;
 
 export const NavLink = styled.a`
@@ -79,11 +35,12 @@ export const NavLink = styled.a`
   align-items: center;
   position: absolute;
   height: 100%;
-  width: 100%;
+  padding: 0 1rem;
   top: 0;
   left: 0;
   text-decoration: none;
   font-size: 24px;
-  background: #2b3033;
+  background: #ffffff;
+  border: 1px solid #000000;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;
