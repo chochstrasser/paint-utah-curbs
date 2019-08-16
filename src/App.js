@@ -1,11 +1,11 @@
 import React from "react";
-import Nav from "./components/nav";
+import MainNav from "./components/main-nav";
 import ContactForm from "./components/contact-form";
 
 const App = () => {
   return (
     <>
-      <Nav />
+      <MainNav />
       <ContactForm />
     </>
   );

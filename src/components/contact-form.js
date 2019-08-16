@@ -58,8 +58,7 @@ const ContactForm = () => {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
   const handleOnClick = () => {
     const xhr = new XMLHttpRequest();
-    const url =
-      "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
+    const url = "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
     const data = JSON.stringify(values);
     xhr.responseType = "json";
     xhr.onreadystatechange = () => {
