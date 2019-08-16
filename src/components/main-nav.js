@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledNav, NavList, NavItem, NavLink } from "./nav-styles";
 
-const Nav = () => {
+const MainNav = () => {
   return (
     <StyledNav>
       <NavList>
@@ -13,4 +13,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default MainNav;
