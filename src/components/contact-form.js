@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledInput = styled.input`
@@ -44,32 +44,62 @@ const StyledSubmit = styled.button`
   :hover {
     background-color: white; /* change a button background when cursor hovered over the button */
     color: black; /* change a font color when cursor hovered over the button */
-    border: 2px solid black; /*add a border when cursor hovered over the button */
+    border: 2px solid black; /* add a border when cursor hovered over the button */
   }
 `;
 
 const StyledForm = styled.form`
   width: 50%;
   font-family: Helvetica, sans-serif, Arial; /* set a font family */
-  margin: 0 auto; /*center a contact form */
+  margin: 0 auto; /* center a contact form */
 `;
 
-const ContactForm = ({ handleOnClick }) => {
+const ContactForm = () => {
+  const [values, setValues] = useState({ name: "", email: "", message: "" });
+  const handleOnClick = () => {
+    const xhr = new XMLHttpRequest();
+    const url =
+      "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
+    const data = JSON.stringify(values);
+    xhr.responseType = "json";
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        return xhr.response;
+      }
+    };
+    xhr.open("POST", url);
+    xhr.send(data);
+  };
   return (
-    <StyledForm id="contactForm">
+    <StyledForm>
       <StyledLabel>Name</StyledLabel>
-      <StyledInput type="text" placeholder="Name" name="name" required />
+      <StyledInput
+        type="text"
+        placeholder="Name"
+        name="name"
+        value={values.name}
+        onChange={e => setValues({ ...values, name: e.target.value })}
+        required
+      />
       <StyledLabel>Email Address</StyledLabel>
       <StyledInput
         type="email"
         placeholder="Email Address"
         name="email"
+        value={values.email}
+        onChange={e => setValues({ ...values, email: e.target.value })}
         required
       />
       <StyledLabel>Message</StyledLabel>
-      <StyledText rows="5" placeholder="Message" name="content" required />
-      <div id="toast" />
-      <StyledSubmit type="submit" id="submit" onclick={handleOnClick} disabled>
+      <StyledText
+        rows="5"
+        placeholder="Message"
+        name="content"
+        value={values.message}
+        onChange={e => setValues({ ...values, message: e.target.value })}
+        required
+      />
+      <StyledSubmit type="button" onClick={handleOnClick}>
         Send
       </StyledSubmit>
     </StyledForm>
