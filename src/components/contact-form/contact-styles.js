@@ -41,6 +41,9 @@ export const StyledH1 = styled.h1`
 export const StyledH3 = styled.p`
   padding-bottom: 20px; /* add a padding-bottom */
   text-align: center;
+  line-height: 1.5;
+  font-size: 24px;
+  font-weight: 400;
 `;
 
 export const StyledSubmit = styled.button`
@@ -61,6 +64,5 @@ export const StyledSubmit = styled.button`
 
 export const StyledForm = styled.form`
   width: 40%;
-  font-family: Lato, Helvetica, sans-serif, Arial; /* set a font family */
   margin: 0 auto; /* center a contact form */
 `;
