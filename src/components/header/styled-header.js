@@ -14,6 +14,7 @@ export const StyledContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 100px;
+  /* position: fixed; */
 `;
 
 export const Tel = styled.div`
