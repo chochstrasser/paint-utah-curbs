@@ -6,7 +6,7 @@ const MainNav = () => {
     <StyledNav>
       <NavList>
         <NavItem>
-          <NavLink href="#1">contact icon</NavLink>
+          <NavLink href="#1">Contact</NavLink>
         </NavItem>
       </NavList>
     </StyledNav>

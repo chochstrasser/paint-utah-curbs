@@ -1,7 +1,6 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
   border: none; /* Delete border */
@@ -16,7 +15,7 @@ const StyledInput = styled.input`
   }
 `;
 
-const StyledText = styled.textarea`
+export const StyledText = styled.textarea`
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
   border: none; /* Delete border */
@@ -28,11 +27,23 @@ const StyledText = styled.textarea`
   font-size: 15px; /* Set a font size */
 `;
 
-const StyledLabel = styled.label`
+export const StyledLabel = styled.label`
   font-weight: bold; /* set a bold font */
   padding-bottom: 8px; /* add a padding-bottom */
 `;
-const StyledSubmit = styled.button`
+
+export const StyledH1 = styled.h1`
+  font-weight: bold; /* set a bold font */
+  padding-bottom: 1px; /* add a padding-bottom */
+  text-align: center;
+`;
+
+export const StyledH3 = styled.p`
+  padding-bottom: 20px; /* add a padding-bottom */
+  text-align: center;
+`;
+
+export const StyledSubmit = styled.button`
   background-color: black; /* add a black background of button */
   color: white; /* add a white font on a button */
   padding: 12px 20px; /* set a padding */
@@ -48,60 +59,8 @@ const StyledSubmit = styled.button`
   }
 `;
 
-const StyledForm = styled.form`
-  width: 50%;
-  font-family: Helvetica, sans-serif, Arial; /* set a font family */
+export const StyledForm = styled.form`
+  width: 40%;
+  font-family: Lato, Helvetica, sans-serif, Arial; /* set a font family */
   margin: 0 auto; /* center a contact form */
 `;
-
-const ContactForm = () => {
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
-  const handleOnClick = () => {
-    const xhr = new XMLHttpRequest();
-    const url = "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
-    const data = JSON.stringify(values);
-    xhr.responseType = "json";
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        return xhr.response;
-      }
-    };
-    xhr.open("POST", url);
-    xhr.send(data);
-  };
-  return (
-    <StyledForm>
-      <StyledLabel>Name</StyledLabel>
-      <StyledInput
-        type="text"
-        placeholder="Name"
-        name="name"
-        value={values.name}
-        onChange={e => setValues({ ...values, name: e.target.value })}
-        required
-      />
-      <StyledLabel>Email Address</StyledLabel>
-      <StyledInput
-        type="email"
-        placeholder="Email Address"
-        name="email"
-        value={values.email}
-        onChange={e => setValues({ ...values, email: e.target.value })}
-        required
-      />
-      <StyledLabel>Message</StyledLabel>
-      <StyledText
-        rows="5"
-        placeholder="Message"
-        name="content"
-        value={values.message}
-        onChange={e => setValues({ ...values, message: e.target.value })}
-        required
-      />
-      <StyledSubmit type="button" onClick={handleOnClick}>
-        Send
-      </StyledSubmit>
-    </StyledForm>
-  );
-};
-export default ContactForm;
