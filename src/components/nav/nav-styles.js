@@ -41,6 +41,6 @@ export const NavLink = styled.a`
   text-decoration: none;
   font-size: 24px;
   background: #ffffff;
-  border: 1px solid #000000;
+  border-right: 1px solid #000000;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 `;
