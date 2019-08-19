@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { isUserWhitespacable } from "@babel/types";
 
 export const StyledHeader = styled.div`
   top: 0;
@@ -11,18 +10,9 @@ export const StyledContainer = styled.div`
   width: 90%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
   height: 100px;
-`;
-
-export const Tel = styled.div`
-  color: black;
-  width: 75%;
-  padding: 15px;
-  font-size: 20px;
-  font-weight: 900;
-  text-align: right;
 `;
 
 export const Logo = styled.div`
