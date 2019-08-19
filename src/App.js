@@ -4,7 +4,7 @@ import ContactForm from "./components/contact-form/contact-form";
 import Header from "./components/header/header";
 import Welcome from "./components/welcome/welcome";
 import Benefits from "./components/benefits/benefits";
-import { MainStyle } from "./styled-main";
+import { MainStyle } from "./main-styles";
 const App = () => {
   return (
     <MainStyle>

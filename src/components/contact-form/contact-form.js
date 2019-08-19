@@ -7,7 +7,7 @@ import {
   StyledH3,
   StyledSubmit,
   StyledForm
-} from "./styled-contact";
+} from "./contact-styles";
 
 const ContactForm = () => {
   const [values, setValues] = useState({ name: "", email: "", message: "" });

@@ -6,7 +6,7 @@ import {
   StyledWelcomeH1,
   StyledWelcomeText,
   StyledText
-} from "./styled-welcome";
+} from "./welcome-styles";
 
 const Welcome = () => {
   return (

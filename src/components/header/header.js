@@ -4,7 +4,7 @@ import {
   StyledContainer,
   Logo,
   StyledBold
-} from "./styled-header";
+} from "./header-styles";
 const Header = () => {
   return (
     <StyledHeader>

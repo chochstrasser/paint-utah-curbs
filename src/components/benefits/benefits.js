@@ -8,7 +8,7 @@ import {
   StyledText,
   StyledBenefit,
   StyledBold
-} from "./styled-benefits";
+} from "./benefits-styles";
 
 const Benefits = () => {
   return (
