@@ -65,4 +65,5 @@ export const StyledSubmit = styled.button`
 export const StyledForm = styled.form`
   width: 40%;
   margin: 0 auto; /* center a contact form */
+  padding: 50px 0px;
 `;

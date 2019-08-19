@@ -1,11 +1,16 @@
 import React from "react";
-import { StyledHeader, StyledContainer, Logo } from "./styled-header";
+import {
+  StyledHeader,
+  StyledContainer,
+  Logo,
+  StyledBold
+} from "./styled-header";
 const Header = () => {
   return (
     <StyledHeader>
       <StyledContainer>
         <Logo>
-          <b>Paint</b>Utah<b>Curbs</b>
+          <StyledBold>Paint</StyledBold>Utah<StyledBold>Curbs</StyledBold>
         </Logo>
       </StyledContainer>
     </StyledHeader>

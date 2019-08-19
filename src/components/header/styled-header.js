@@ -4,6 +4,7 @@ export const StyledHeader = styled.div`
   top: 0;
   margin-left: 100px;
   background-color: whitesmoke;
+  /* position: fixed; */
 `;
 
 export const StyledContainer = styled.div`
@@ -20,4 +21,9 @@ export const Logo = styled.div`
   width: 35%;
   font-size: 30px;
   font-weight: 300;
+`;
+
+export const StyledBold = styled.b`
+  font-size: 30px;
+  font-weight: 900;
 `;
