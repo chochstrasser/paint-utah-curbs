@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledWelcome = styled.div`
   margin-left: 100px;
-  padding: 50px 10px 50px 10px;
+  padding: 0px 10px 50px 10px;
 `;
 export const StyledContainer = styled.div`
   width: 90%;
@@ -10,11 +10,12 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: auto;
+  flex-wrap: wrap;
 `;
 
 export const StyledImg = styled.img`
-  height: 100%;
+  height: 500px;
 `;
 
 export const StyledText = styled.div`
@@ -31,4 +32,17 @@ export const StyledWelcomeText = styled.div`
   font-size: 24px;
   font-weight: 400;
   text-align: left;
+`;
+
+export const Logo = styled.div`
+  font-size: 30px;
+  font-weight: 300;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0px;
+`;
+
+export const StyledBold = styled.b`
+  font-size: 30px;
+  font-weight: 900;
 `;
