@@ -62,8 +62,18 @@ export const StyledSubmit = styled.button`
   }
 `;
 
+export const FormContainer = styled.div`
+  margin-left: 100px;
+    @media only screen and (min-width : 320px) {
+      margin: 0;
+    };
+  `
 export const StyledForm = styled.form`
-  width: 40%;
-  margin: 0 auto; /* center a contact form */
+  width: 60%;
   padding: 50px 0px;
+  margin: 0 auto; /* center a contact form */
+
+  @media only screen and (max-device-width : 1024px){
+  width: 90%;
+}
 `;

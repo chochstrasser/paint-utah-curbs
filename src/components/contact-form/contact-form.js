@@ -6,7 +6,8 @@ import {
   StyledH1,
   StyledH3,
   StyledSubmit,
-  StyledForm
+  StyledForm,
+  FormContainer
 } from "./contact-styles";
 
 const ContactForm = () => {
@@ -26,43 +27,45 @@ const ContactForm = () => {
     xhr.send(data);
   };
   return (
+    <FormContainer>
     <StyledForm>
-      <StyledH1>Have a question?</StyledH1>
-      <StyledH3>
-        Send us any questions or concerns from our contact us form, and we will
-        get back to you as soon as we can!
-      </StyledH3>
-      <StyledLabel>Name</StyledLabel>
-      <StyledInput
-        type="text"
-        placeholder="Name"
-        name="name"
-        value={values.name}
-        onChange={e => setValues({ ...values, name: e.target.value })}
-        required
-      />
-      <StyledLabel>Email Address</StyledLabel>
-      <StyledInput
-        type="email"
-        placeholder="Email Address"
-        name="email"
-        value={values.email}
-        onChange={e => setValues({ ...values, email: e.target.value })}
-        required
-      />
-      <StyledLabel>Message</StyledLabel>
-      <StyledText
-        rows="5"
-        placeholder="Message"
-        name="content"
-        value={values.message}
-        onChange={e => setValues({ ...values, message: e.target.value })}
-        required
-      />
-      <StyledSubmit type="button" onClick={handleOnClick}>
-        Send
-      </StyledSubmit>
-    </StyledForm>
+    <StyledH1>Have a question?</StyledH1>
+    <StyledH3>
+      Send us any questions or concerns from our contact us form, and we will
+      get back to you as soon as we can!
+    </StyledH3>
+    <StyledLabel>Name</StyledLabel>
+    <StyledInput
+      type="text"
+      placeholder="Name"
+      name="name"
+      value={values.name}
+      onChange={e => setValues({ ...values, name: e.target.value })}
+      required
+    />
+    <StyledLabel>Email Address</StyledLabel>
+    <StyledInput
+      type="email"
+      placeholder="Email Address"
+      name="email"
+      value={values.email}
+      onChange={e => setValues({ ...values, email: e.target.value })}
+      required
+    />
+    <StyledLabel>Message</StyledLabel>
+    <StyledText
+      rows="5"
+      placeholder="Message"
+      name="content"
+      value={values.message}
+      onChange={e => setValues({ ...values, message: e.target.value })}
+      required
+    />
+    <StyledSubmit type="button" onClick={handleOnClick}>
+      Send
+    </StyledSubmit>
+  </StyledForm></FormContainer>
+    
   );
 };
 export default ContactForm;

@@ -7,6 +7,10 @@ export const StyledNav = styled.nav`
   left: 0;
   width: 100px;
   backface-visibility: hidden;
+  @media only screen and (max-device-width : 1024px) {
+display:none;
+}
+
 `;
 
 export const NavList = styled.ul`
