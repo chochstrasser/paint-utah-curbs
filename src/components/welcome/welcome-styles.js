@@ -62,7 +62,6 @@ export const Logo = styled.div`
   width: 90%;
   margin: 0 auto;
   padding: 50px 0px;
-
 `;
 
 export const StyledBold = styled.b`

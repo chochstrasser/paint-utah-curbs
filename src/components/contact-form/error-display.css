@@ -9,7 +9,7 @@
   padding: 0;
   color: red;
   font-style: bold;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 10px;
 }
 
@@ -23,5 +23,11 @@
   font-weight: bold; /* set a bold font */
   padding-bottom: 1px; /* add a padding-bottom */
   text-align: center;
+
+}
+
+span {
+  content: "\2713";
+  color: green;
 
 }

@@ -1,17 +1,16 @@
-import React from "react"
+import { useState, useEffect } from "react"
 
 
-function  useFormValidation (initialState, validate)  {
-    const [values, setValues] = React.useState(initialState);
-    const [errors, setErrors] = React.useState({});
-    const [disable, setDisable] = React.useState("");
-    const [sent, setSent] = React.useState(false);
+const useFormValidation = (initialState, validate) => {
+    const [values, setValues] = useState(initialState);
+    const [errors, setErrors] = useState({});
+    const [disable, setDisable] = useState("");
+    const [sent, setSent] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (disable) {
             const noErrors = Object.keys(errors).length === 0;
             if (noErrors) {
-                console.log(`name: ${values.name}, email: ${values.email}, message: ${values.message}`)
                 const xhr = new XMLHttpRequest();
                 const url =
                      "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
@@ -34,18 +33,17 @@ function  useFormValidation (initialState, validate)  {
         }
     }, [disable, errors, values]);
 
-    function handleChange (event) {
+    const handleChange = (event) => {
         setValues ({
             ...values,
             [event.target.name] : event.target.value
         })
-        console.log(`${event.target.name}: ${event.target.value}`)
     }
-    function handleBlur () {
+    const handleBlur = () => {
         const validationErrors = validate(values);
         setErrors (validationErrors);
     }
-    function handleOnClick () {
+    const handleOnClick = () => {
 
         const validationErrors = validate(values);
         setErrors (validationErrors);
