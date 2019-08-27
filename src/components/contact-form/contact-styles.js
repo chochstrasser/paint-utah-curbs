@@ -12,7 +12,7 @@ export const StyledInput = styled.input`
   font-size: 15px; /* Set a font size */
   ::placeholder {
     font-size: 15px; /* add a font size of placeholders*/
-  }
+  };
 `;
 
 export const StyledText = styled.textarea`

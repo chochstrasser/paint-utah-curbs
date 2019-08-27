@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import useFormValidation from "./useFormValidation";
+import validateForm from "./validateForm";
+import "./error-display.css";
 import {
   StyledInput,
   StyledText,
@@ -7,28 +10,25 @@ import {
   StyledH3,
   StyledSubmit,
   StyledForm,
-  FormContainer
+  FormContainer,
 } from "./contact-styles";
 
+
 const ContactForm = () => {
-  const [values, setValues] = useState({ name: "", email: "", message: "" });
-  const handleOnClick = () => {
-    const xhr = new XMLHttpRequest();
-    const url =
-      "https://u7w61rtzaa.execute-api.us-west-2.amazonaws.com/v1/contact-us";
-    const data = JSON.stringify(values);
-    xhr.responseType = "json";
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        return xhr.response;
-      }
-    };
-    xhr.open("POST", url);
-    xhr.send(data);
-  };
+  const INITIAL_STATE = {
+    name: "",
+    email: "", 
+    message: "" 
+ };
+  const { handleChange, values, handleOnClick, handleBlur, errors, disable, sent } = useFormValidation(INITIAL_STATE, validateForm);
+
+
+  
   return (
     <FormContainer>
-    <StyledForm>
+        {sent && <h1 className="h1confirm"><span>&#10003; </span>Your message has been sent!</h1>} 
+
+    <StyledForm className= {sent && "formDisable"}>
     <StyledH1>Have a question?</StyledH1>
     <StyledH3>
       Send us any questions or concerns from our contact us form, and we will
@@ -39,33 +39,44 @@ const ContactForm = () => {
       type="text"
       placeholder="Name"
       name="name"
+      onBlur = {handleBlur}
       value={values.name}
-      onChange={e => setValues({ ...values, name: e.target.value })}
+      onChange = {handleChange}
+      className = {errors.name && 'error-input'}
+
       required
     />
+{errors.name && <div className ="error-text">{errors.name}</div>} 
     <StyledLabel>Email Address</StyledLabel>
     <StyledInput
       type="email"
       placeholder="Email Address"
       name="email"
+      onBlur = {handleBlur}
       value={values.email}
-      onChange={e => setValues({ ...values, email: e.target.value })}
+      onChange = {handleChange}
+      className = {errors.email && 'error-input'}
       required
     />
-    <StyledLabel>Message</StyledLabel>
+{errors.email && <div className ="error-text">{errors.email}</div>} 
+      <StyledLabel>Message</StyledLabel>
     <StyledText
       rows="5"
       placeholder="Message"
-      name="content"
+      name="message"
+      onBlur = {handleBlur}
       value={values.message}
-      onChange={e => setValues({ ...values, message: e.target.value })}
+      onChange = {handleChange}
+      className = {errors.message && 'error-input'}
       required
     />
-    <StyledSubmit type="button" onClick={handleOnClick}>
+    {errors.message && <div className ="error-text">{errors.message}</div>} 
+    <StyledSubmit type="button" onClick={handleOnClick} disabled={disable}>
       Send
     </StyledSubmit>
   </StyledForm></FormContainer>
     
   );
 };
+
 export default ContactForm;
