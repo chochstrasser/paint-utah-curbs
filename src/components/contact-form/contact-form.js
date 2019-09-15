@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   
   return (
-    <FormContainer>
+    <FormContainer id="contact">
         {sent && <h1 className="h1confirm"><span>&#10003; </span>Your message has been sent!</h1>} 
 
     <StyledForm className= {sent && "formDisable"}>

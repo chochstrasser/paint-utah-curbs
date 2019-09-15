@@ -15,7 +15,7 @@ const App = () => {
       <NavBar /> 
       <Welcome />
       <Benefits />
-      <ContactForm />
+      <ContactForm/>
     </MainStyle>
   </BrowserRouter>
   );

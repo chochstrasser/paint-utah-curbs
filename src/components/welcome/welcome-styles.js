@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledWelcome = styled.div`
-  padding: 0px 10px 50px 10px;
+  padding: 150px 10px 50px 10px;
   @media only screen and (max-device-width : 1024px) {
     padding: 0 10px;
-    margin: 0 auto;
+    margin:  0 auto;
 }
 `;
 export const StyledContainer = styled.div`

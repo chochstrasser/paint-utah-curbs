@@ -1,25 +1,27 @@
 import React from "react";
-import { StyledBold, Logo, Navigation, StyledNav, StyledUl, StyledLi} from "./nav-bar-styles";
-import { Link } from 'react-router-dom'
+import { StyledBold, Logo, Navigation, StyledNav, StyledUl, StyledLi, Container} from "./nav-bar-styles";
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 const NavBar = () => {
     return (
     <Navigation>
+    <Container>
         <Logo>
        <StyledBold>Paint</StyledBold>Utah<StyledBold>Curbs</StyledBold>
         </Logo>
         <StyledNav>
             <StyledUl>
          
-            <StyledLi><Link to="/">Home</Link></StyledLi>
-                <StyledLi><Link to="/benefits">Benefits</Link></StyledLi>
-                <StyledLi><Link to="/contact">Contact</Link></StyledLi>
+            <Link to="/#welcom"><StyledLi>Home</StyledLi></Link>
+                <Link to="/#benefits"><StyledLi>Benefits</StyledLi></Link>
+                <Link to="/#contact"><StyledLi>Contact</StyledLi></Link>
                
     
             </StyledUl>
          
         </StyledNav>
+        </Container>
     </Navigation>
     )
 }
