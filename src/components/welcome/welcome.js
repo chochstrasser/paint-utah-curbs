@@ -12,10 +12,7 @@ import {
 
 const Welcome = () => {
   return (
-    <StyledWelcome>
-      <Logo>
-        <StyledBold>Paint</StyledBold>Utah<StyledBold>Curbs</StyledBold>
-      </Logo>
+    <StyledWelcome id="welcome">
       <StyledContainer>
         <StyledImg src="https://s3-us-west-2.amazonaws.com/www.paintutahcurbs.com/54.jpg" />
         <StyledText>

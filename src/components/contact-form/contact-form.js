@@ -25,7 +25,7 @@ const ContactForm = () => {
 
   
   return (
-    <FormContainer>
+    <FormContainer id="contact">
         {sent && <h1 className="h1confirm"><span>&#10003; </span>Your message has been sent!</h1>} 
 
     <StyledForm className= {sent && "formDisable"}>
@@ -56,6 +56,18 @@ const ContactForm = () => {
       value={values.email}
       onChange = {handleChange}
       className = {errors.email && 'error-input'}
+      required
+    />
+{errors.email && <div className ="error-text">{errors.phone}</div>} 
+<StyledLabel>Phone number</StyledLabel>
+    <StyledInput
+      type="phone"
+      placeholder="Phone Number"
+      name="phone"
+      onBlur = {handleBlur}
+      value={values.phone}
+      onChange = {handleChange}
+      className = {errors.phone && 'error-input'}
       required
     />
 {errors.email && <div className ="error-text">{errors.email}</div>} 

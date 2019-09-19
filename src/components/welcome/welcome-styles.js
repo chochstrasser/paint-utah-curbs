@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const StyledWelcome = styled.div`
-  margin-left: 100px;
-  padding: 0px 10px 50px 10px;
+  padding: 150px 10px 50px 10px;
   @media only screen and (max-device-width : 1024px) {
-    margin-left: 0px;
     padding: 0 10px;
-    margin: 0 auto;
+    margin:  0 auto;
 }
 `;
 export const StyledContainer = styled.div`
@@ -56,15 +54,3 @@ export const StyledWelcomeText = styled.div`
 }
 `;
 
-export const Logo = styled.div`
-  font-size: 30px;
-  font-weight: 300;
-  width: 90%;
-  margin: 0 auto;
-  padding: 50px 0px;
-`;
-
-export const StyledBold = styled.b`
-  font-size: 30px;
-  font-weight: 900;
-`;

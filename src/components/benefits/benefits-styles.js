@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledBenefits = styled.div`
-  margin-left: 100px;
   padding: 50px 10px 50px 10px;
   background-color: whitesmoke;
   @media only screen and (max-device-width : 1024px) {
