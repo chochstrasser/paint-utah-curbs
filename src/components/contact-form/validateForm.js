@@ -15,11 +15,11 @@ const validate = values => {
     errors.name = "Name must be at least 3 characters";
   }
 
-  // phone
+  // Phone
   if (!values.phone) {
-    errors.phone = "Required Phone";
-  } else if (values.phone.length < 10) {
-    errors.phone = "Phone must include area code";
+    errors.phone = "Required Phone Number";
+  } else if (!/^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/i.test(values.phone)) {
+    errors.phone = "Invalid phone number format";
   }
 
   // message

@@ -20,7 +20,6 @@ const ContactForm = () => {
           <span>&#10003; </span>Your message has been sent!
         </h1>
       )}
-
       <StyledForm className={sent && "formDisable"}>
         <StyledH1>Have a question?</StyledH1>
         <StyledH3>Send us any questions or concerns from our contact us form, and we will get back to you as soon as we can!</StyledH3>
