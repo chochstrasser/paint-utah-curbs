@@ -13,7 +13,7 @@ const NavBar = () => {
         <StyledNav>
             <StyledUl>
          
-            <Link to="/#welcom"><StyledLi>Home</StyledLi></Link>
+            <Link to="/#welcome"><StyledLi>Home</StyledLi></Link>
                 <Link to="/#benefits"><StyledLi>Benefits</StyledLi></Link>
                 <Link to="/#contact"><StyledLi>Contact</StyledLi></Link>
                

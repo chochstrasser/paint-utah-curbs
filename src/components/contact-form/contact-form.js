@@ -58,6 +58,18 @@ const ContactForm = () => {
       className = {errors.email && 'error-input'}
       required
     />
+{errors.email && <div className ="error-text">{errors.phone}</div>} 
+<StyledLabel>Phone number</StyledLabel>
+    <StyledInput
+      type="phone"
+      placeholder="Phone Number"
+      name="phone"
+      onBlur = {handleBlur}
+      value={values.phone}
+      onChange = {handleChange}
+      className = {errors.phone && 'error-input'}
+      required
+    />
 {errors.email && <div className ="error-text">{errors.email}</div>} 
       <StyledLabel>Message</StyledLabel>
     <StyledText

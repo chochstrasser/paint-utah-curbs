@@ -12,7 +12,7 @@ import {
 
 const Benefits = () => {
   return (
-    <StyledBenefits id="benefits">
+    <StyledBenefits  id="benefits">
       <StyledContainer>
         <StyledImg src="https://s3-us-west-2.amazonaws.com/www.paintutahcurbs.com/237.jpg" />
         <StyledText>

@@ -7,18 +7,27 @@
     ) {
       errors.email = 'Invalid email address';
     }
-
     if (!values.name) {
         errors.name = 'Required Name';
     } else if (values.name.length < 3)
     {
         errors.name = 'Name must be at least 3 characters';
     }
+
+    if (!values.phone) {
+      errors.phone = 'Required Phone Number';
+  } else if (
+    !/^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/i.test(values.phone)
+  ) {
+    errors.phone = 'Invalid phone number format';
+  }
+  
     if (!values.message) {
         errors.message = 'Required Message';
     } else if (values.message.length < 10){
         errors.message = 'Name must be at least 10 characters';
     }
+
     return errors;
 }
 
