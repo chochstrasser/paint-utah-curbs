@@ -1,10 +1,9 @@
 .error-input {
-    border-bottom: 2px solid red; /* Add a bottom border */
-    margin-bottom: 0px; /* Bottom margin */
+  border-bottom: 2px solid red; /* Add a bottom border */
+  margin-bottom: 0px; /* Bottom margin */
+}
 
-  }
-
-.error-text {  
+.error-text {
   margin: 0;
   padding: 0;
   color: red;
@@ -13,21 +12,17 @@
   margin-bottom: 10px;
 }
 
-
 .formDisable {
   display: none;
 }
 
 .h1confirm {
-
   font-weight: bold; /* set a bold font */
   padding-bottom: 1px; /* add a padding-bottom */
   text-align: center;
-
 }
 
 span {
   content: "\2713";
   color: green;
-
 }

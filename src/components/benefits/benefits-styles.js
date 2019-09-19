@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledBenefits = styled.div`
-  padding: 50px 10px 50px 10px;
+  padding: 4.5rem 10px 50px 10px;
   background-color: whitesmoke;
-  @media only screen and (max-device-width : 1024px) {
+  @media only screen and (max-device-width: 1024px) {
     margin-left: 0px;
-    padding: 0 10px;
-}
+    padding-top: 10rem;
+  }
 `;
 export const StyledContainer = styled.div`
   width: 90%;
@@ -21,26 +21,23 @@ export const StyledContainer = styled.div`
 export const StyledImg = styled.img`
   height: 500px;
   order: 2;
-  @media only screen and (max-device-width : 1024px){
-  order: 2;
-  padding-top: 30px;
-  height: 400px;
-  padding-bottom: 20px;
-
-}
-
+  @media only screen and (max-device-width: 1024px) {
+    order: 2;
+    padding-top: 30px;
+    height: 400px;
+    padding-bottom: 20px;
+  }
 `;
 
 export const StyledText = styled.div`
   width: 50%;
   order: 1;
   padding-right: 50px;
-  @media only screen and (max-device-width : 1024px){
-  order: 1;
-  width: 100%;
-  padding-right: 0px;
-}
-
+  @media only screen and (max-device-width: 1024px) {
+    order: 1;
+    width: 100%;
+    padding-right: 0px;
+  }
 `;
 
 export const StyledBenefitH1 = styled.h1`
@@ -52,7 +49,6 @@ export const StyledBenefitText = styled.div`
   font-size: 20px;
   font-weight: 400;
   text-align: left;
-
 `;
 
 export const StyledBenefit = styled.p`
