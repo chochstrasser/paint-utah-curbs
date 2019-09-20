@@ -24,8 +24,6 @@ const NavBar = () => {
             <Link to="/#welcome" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Home</StyledLi></Link>
                 <Link to="/#benefits" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Benefits</StyledLi></Link>
                 <Link to="/#contact" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Contact</StyledLi></Link>
-               
-    
             </StyledUl>
          
         </StyledNav>
