@@ -8,14 +8,14 @@ import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-  <BrowserRouter>
-    <MainStyle>
-      <NavBar /> 
-      <Welcome />
-      <Benefits />
-      <ContactForm/>
-    </MainStyle>
-  </BrowserRouter>
+    <BrowserRouter>
+      <MainStyle>
+        <NavBar />
+        <Welcome />
+        <Benefits />
+        <ContactForm />
+      </MainStyle>
+    </BrowserRouter>
   );
 };
 

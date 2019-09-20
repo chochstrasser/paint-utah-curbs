@@ -12,7 +12,7 @@ export const StyledInput = styled.input`
   font-size: 15px; /* Set a font size */
   ::placeholder {
     font-size: 15px; /* add a font size of placeholders*/
-  };
+  }
 `;
 
 export const StyledText = styled.textarea`
@@ -63,16 +63,16 @@ export const StyledSubmit = styled.button`
 `;
 
 export const FormContainer = styled.div`
-    @media only screen and (min-width : 320px) {
-      margin: 0;
-    };
-  `
+  @media only screen and (min-width: 320px) {
+    margin: 0;
+  }
+`;
 export const StyledForm = styled.form`
   width: 60%;
-  padding: 50px 0px;
+  padding: 4.5rem 0px;
   margin: 0 auto; /* center a contact form */
 
-  @media only screen and (max-device-width : 1024px){
-  width: 90%;
-}
+  @media only screen and (max-device-width: 1024px) {
+    width: 90%;
+  }
 `;

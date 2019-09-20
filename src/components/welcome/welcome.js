@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import {
   StyledWelcome,
   StyledContainer,
@@ -7,6 +8,9 @@ import {
   StyledWelcomeText,
   StyledText
 } from "./welcome-styles";
+=======
+import { StyledWelcome, StyledContainer, StyledImg, StyledWelcomeH1, StyledWelcomeText, StyledText } from "./welcome-styles";
+>>>>>>> master
 
 const Welcome = () => {
   return (
@@ -16,11 +20,9 @@ const Welcome = () => {
         <StyledText>
           <StyledWelcomeH1>Welcome</StyledWelcomeH1>
           <StyledWelcomeText>
-            Having your curb address painting be clearly visible helps Police,
-            Fire, Ambulance Services & other Guests find your home, especially
-            at night when addresses can be hard to find. Statistics show that
-            78% of homes are inadequately numbered for night use, and that's
-            when these numbers really stand out.
+            Having your curb address painting be clearly visible helps Police, Fire, Ambulance Services & other Guests find your home,
+            especially at night when addresses can be hard to find. Statistics show that 78% of homes are inadequately numbered for night
+            use, and that's when these numbers really stand out.
           </StyledWelcomeText>
         </StyledText>
       </StyledContainer>
