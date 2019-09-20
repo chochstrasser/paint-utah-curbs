@@ -5,9 +5,7 @@ import {
   StyledImg,
   StyledWelcomeH1,
   StyledWelcomeText,
-  StyledText,
-  StyledBold,
-  Logo
+  StyledText
 } from "./welcome-styles";
 
 const Welcome = () => {
