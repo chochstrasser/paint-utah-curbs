@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import {
   StyledWelcome,
   StyledContainer,
@@ -8,9 +7,6 @@ import {
   StyledWelcomeText,
   StyledText
 } from "./welcome-styles";
-=======
-import { StyledWelcome, StyledContainer, StyledImg, StyledWelcomeH1, StyledWelcomeText, StyledText } from "./welcome-styles";
->>>>>>> master
 
 const Welcome = () => {
   return (
