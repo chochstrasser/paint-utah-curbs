@@ -5,7 +5,8 @@ export const StyledBenefits = styled.div`
   background-color: whitesmoke;
   @media only screen and (max-device-width: 1024px) {
     margin-left: 0px;
-    padding-top: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 0px;
   }
 `;
 export const StyledContainer = styled.div`
@@ -24,8 +25,9 @@ export const StyledImg = styled.img`
   @media only screen and (max-device-width: 1024px) {
     order: 2;
     padding-top: 30px;
-    height: 400px;
-    padding-bottom: 20px;
+    height: auto;
+    width: 90vw;
+    padding-bottom: 0px;
   }
 `;
 

@@ -35,10 +35,12 @@ const useFormValidation = (initialState, validate) => {
       [event.target.name]: event.target.value
     });
   };
+
   const handleBlur = () => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
   };
+  
   const handleOnClick = () => {
     const validationErrors = validate(values);
     setErrors(validationErrors);

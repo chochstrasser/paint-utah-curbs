@@ -69,7 +69,7 @@ export const FormContainer = styled.div`
 `;
 export const StyledForm = styled.form`
   width: 60%;
-  padding: 4.5rem 0px;
+  padding: 2.5rem 0px;
   margin: 0 auto; /* center a contact form */
 
   @media only screen and (max-device-width: 1024px) {
