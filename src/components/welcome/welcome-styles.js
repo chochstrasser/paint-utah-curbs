@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const StyledWelcome = styled.div`
   padding: 6rem 10px 50px 10px;
   @media only screen and (max-device-width: 1024px) {
-    padding-top: 10rem;
+    padding-top: 5 rem;
+    padding-bottom: 0;
   }
 `;
 export const StyledContainer = styled.div`
@@ -22,7 +23,10 @@ export const StyledImg = styled.img`
   @media only screen and (max-device-width: 1024px) {
     order: 2;
     padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    height: auto;
+    width: 90vw;
+
   }
 `;
 

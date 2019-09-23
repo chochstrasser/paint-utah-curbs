@@ -1,6 +1,8 @@
 import React from "react";
-import { StyledBold, Logo, Navigation, StyledNav, StyledUl, StyledLi, Container} from "./nav-bar-styles";
+import { StyledBold, Logo, Navigation, StyledNav, StyledUl, StyledLi, Container, StyledBurger} from "./nav-bar-styles";
 import { HashLink as Link } from 'react-router-hash-link';
+import HamburgerMenu from "./burger-icon";
+import useBurgerMenu from "./useBurgerMenu";
 
 const scrollWithOffset = (el, offset) => {
     const elementPosition = el.offsetTop - offset;
@@ -11,22 +13,37 @@ const scrollWithOffset = (el, offset) => {
     });    
 };
 
+
 const NavBar = () => {
+  const {handleClick, isOpen, handleSelect} = useBurgerMenu (false, false);
+
   return (
-    <Navigation>
+    <Navigation collapse={isOpen}>
       <Container>
         <Logo>
           <StyledBold>Paint</StyledBold>Utah<StyledBold>Curbs</StyledBold>
         </Logo>
-        <StyledNav>
-            <StyledUl>
-         
-            <Link to="/#welcome" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Home</StyledLi></Link>
-                <Link to="/#benefits" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Benefits</StyledLi></Link>
-                <Link to="/#contact" scroll={el => scrollWithOffset(el, 150)}><StyledLi>Contact</StyledLi></Link>
-            </StyledUl>
+        <StyledNav collapse={isOpen}>
+          <StyledUl>
+            <Link to="/#welcome" scroll={el => scrollWithOffset(el, 50)}><StyledLi onClick = { handleSelect}>Home</StyledLi></Link>
+            <Link to="/#benefits" scroll={el => scrollWithOffset(el, 50)}><StyledLi onClick = {handleSelect }>Benefits</StyledLi></Link>
+            <Link to="/#contact" scroll={el => scrollWithOffset(el, 50)}><StyledLi onClick = {handleSelect}>Contact</StyledLi></Link>
+          </StyledUl>
          
         </StyledNav>
+        <StyledBurger>
+        <HamburgerMenu
+					isOpen={isOpen}
+					menuClicked={handleClick}
+					width={20}
+					height={18}
+					strokeWidth={1}
+					rotate={0}
+					color='black'
+					borderRadius={0}
+					animationDuration={0.5}
+				/>
+        </StyledBurger>   
       </Container>
     </Navigation>
   );
