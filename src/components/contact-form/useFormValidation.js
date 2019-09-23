@@ -37,8 +37,7 @@ const useFormValidation = (initialState, validate) => {
     });
   };
 
-  const handleBlur = (event) => {
-
+  const handleBlur = event => {
     setTouch({
       ...touch,
       [event.target.name]: true
@@ -46,7 +45,7 @@ const useFormValidation = (initialState, validate) => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
   };
-  
+
   const handleOnClick = () => {
     const validationErrors = validate(values);
     setErrors(validationErrors);

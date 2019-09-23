@@ -34,7 +34,7 @@ const ContactForm = () => {
           className={errors.name && "error-input"}
           required
         />
-        {(errors.name && touch.name) && <div className="error-text">{errors.name}</div>}
+        {errors.name && touch.name && <div className="error-text">{errors.name}</div>}
         <StyledLabel>Email Address</StyledLabel>
         <StyledInput
           type="email"
@@ -46,7 +46,7 @@ const ContactForm = () => {
           className={errors.email && "error-input"}
           required
         />
-        {(errors.email && touch.email) && <div className="error-text">{errors.email}</div>}
+        {errors.email && touch.email && <div className="error-text">{errors.email}</div>}
         <StyledLabel>Phone</StyledLabel>
         <StyledInput
           type="phone"
@@ -58,7 +58,7 @@ const ContactForm = () => {
           className={errors.phone && "error-input"}
           required
         />
-        {(errors.phone && touch.phone) && <div className="error-text">{errors.phone}</div>}
+        {errors.phone && touch.phone && <div className="error-text">{errors.phone}</div>}
         <StyledLabel>Message</StyledLabel>
         <StyledText
           rows="5"
@@ -70,7 +70,7 @@ const ContactForm = () => {
           className={errors.message && "error-input"}
           required
         />
-        {(errors.message && touch.message) && <div className="error-text">{errors.message}</div>}
+        {errors.message && touch.message && <div className="error-text">{errors.message}</div>}
         <StyledSubmit type="button" onClick={handleOnClick} disabled={disable}>
           Send
         </StyledSubmit>
