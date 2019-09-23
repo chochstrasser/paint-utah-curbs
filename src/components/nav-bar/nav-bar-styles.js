@@ -19,7 +19,7 @@ export const Container = styled.div`
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     flex-flow: column-wrap;
   }
 `;
@@ -35,7 +35,7 @@ export const Logo = styled.div`
   font-weight: 300;
   margin: 0 auto;
   padding: 1.5rem 0;
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     flex-basis: calc(90vw - 20px);
   }
 `;
@@ -48,7 +48,7 @@ export const StyledNav = styled.nav`
   justify-content: flex-end;
   flex-grow: 2;
 
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     order: 3;
     display: ${props => (props.collapse ? "block" : "none")};
     align-self: flex-end;
@@ -59,10 +59,10 @@ export const StyledBurger = styled.div`
   order: 3;
   display: flex;
   align-self: center;
-  @media only screen and (min-device-width: 1025px) {
+  @media only screen and (min-width: 1025px) {
     display: none;
   }
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     order: 2;
   }
 `;
@@ -77,7 +77,7 @@ export const StyledLi = styled.li`
   color: black;
   text-transform: uppercase;
 
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
     display: ${props => (props.collapse ? "none" : "block")};
     width: 100%;
     text-align: center;

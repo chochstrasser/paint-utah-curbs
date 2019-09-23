@@ -5,6 +5,7 @@ const useFormValidation = (initialState, validate) => {
   const [errors, setErrors] = useState({});
   const [disable, setDisable] = useState("");
   const [sent, setSent] = useState(false);
+  const [touch, setTouch] = useState({});
 
   useEffect(() => {
     if (disable) {
@@ -36,18 +37,22 @@ const useFormValidation = (initialState, validate) => {
     });
   };
 
-  const handleBlur = () => {
+  const handleBlur = event => {
+    setTouch({
+      ...touch,
+      [event.target.name]: true
+    });
     const validationErrors = validate(values);
     setErrors(validationErrors);
   };
-  
+
   const handleOnClick = () => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setDisable("disabled");
   };
 
-  return { handleChange, values, handleOnClick, handleBlur, errors, disable, sent };
+  return { handleChange, values, handleOnClick, handleBlur, errors, disable, sent, touch };
 };
 
 export default useFormValidation;

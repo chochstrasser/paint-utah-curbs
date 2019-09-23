@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-const useBurgerMenu = (initialState, isClicked) => {
+const useBurgerMenu = (initialState, initialClick) => {
   const [isOpen, setIsOpen] = useState(initialState);
-  const [isClick, setIsClick] = useState(false);
+  const [isClick, setIsClick] = useState(initialClick);
 
   useEffect(() => {
     if (isClick && isOpen) {
