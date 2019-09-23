@@ -1,38 +1,32 @@
 import { useState, useEffect } from "react";
 
-
 const useBurgerMenu = (initialState, initialClick) => {
-const [isOpen, setIsOpen] = useState(initialState);
-const [isClick, setIsClick] = useState(initialClick);
+  const [isOpen, setIsOpen] = useState(initialState);
+  const [isClick, setIsClick] = useState(initialClick);
 
-
-
-useEffect(() => {
-    if(isClick && isOpen) {
-        hide();
-    }  
+  useEffect(() => {
+    if (isClick && isOpen) {
+      hide();
+    }
   }, [isOpen, isClick]);
-const hide = () => {
-    setIsOpen(false);   
-    
-}
+  const hide = () => {
+    setIsOpen(false);
+  };
 
-const show = () => {
+  const show = () => {
     setIsOpen(true);
-    setIsClick(false)
-   
-};
+    setIsClick(false);
+  };
 
-const handleSelect = () => {
+  const handleSelect = () => {
     setIsClick(true);
-};
+  };
 
+  const handleClick = () => {
+    isOpen ? hide() : show();
+  };
 
-const handleClick = () => {
-    isOpen ? hide () : show();
-};
-
-    return {handleClick, isOpen, handleSelect};
+  return { handleClick, isOpen, handleSelect };
 };
 
 export default useBurgerMenu;
