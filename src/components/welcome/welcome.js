@@ -1,5 +1,12 @@
 import React from "react";
-import { StyledWelcome, StyledContainer, StyledImg, StyledWelcomeH1, StyledWelcomeText, StyledText } from "./welcome-styles";
+import {
+  StyledWelcome,
+  StyledContainer,
+  StyledImg,
+  StyledWelcomeH1,
+  StyledWelcomeText,
+  StyledText
+} from "./welcome-styles";
 
 const Welcome = () => {
   return (
