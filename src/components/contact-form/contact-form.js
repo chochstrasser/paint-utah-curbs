@@ -1,6 +1,5 @@
 import React from "react";
 import useFormValidation from "./useFormValidation";
-import validateForm from "./validateForm";
 import "./error-display.css";
 import { StyledInput, StyledText, StyledLabel, StyledH1, StyledH3, StyledSubmit, StyledForm, FormContainer } from "./contact-styles";
 
@@ -11,7 +10,7 @@ const ContactForm = () => {
     phone: "",
     message: ""
   };
-  const { handleChange, values, handleOnClick, handleBlur, errors, disable, sent, touch } = useFormValidation(INITIAL_STATE, validateForm);
+  const { handleChange, values, handleOnClick, handleBlur, errors, disable, sent, touch } = useFormValidation(INITIAL_STATE);
 
   return (
     <FormContainer id="contact">
