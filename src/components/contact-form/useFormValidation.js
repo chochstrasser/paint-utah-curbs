@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import validate from "./validateForm";
 
-const useFormValidation = (initialState, validate) => {
+const useFormValidation = initialState => {
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [disable, setDisable] = useState("");
@@ -35,6 +36,12 @@ const useFormValidation = (initialState, validate) => {
       ...values,
       [event.target.name]: event.target.value
     });
+    setTouch({
+      ...touch,
+      [event.target.name]: true
+    });
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
   };
 
   const handleBlur = event => {
