@@ -32,27 +32,27 @@ export default function HamburgerMenu(props) {
       position: "absolute"
     },
     firstLine: {
-      transform: getTransformValue(isOpen, 0, 45),
+      transform: getTransformValue(isOpen, 0, -45),
       marginTop: halfStrokeWidth
     },
     secondLine: {
       transitionTimingFunction: "ease-out",
-      transitionDuration: `${animationDuration / 4}s`,
+      transitionDuration: `${animationDuration / 2}s`,
       opacity: isOpen ? "0" : "1",
       top: halfHeight,
       marginTop: halfStrokeWidth
     },
     thirdLine: {
-      transform: getTransformValue(isOpen, height, -45),
+      transform: getTransformValue(isOpen, height, 45),
       marginTop: halfStrokeWidth
     }
   };
 
   return (
     <div style={styles.container} onClick={props.menuClicked}>
-      <span style={Object.assign({}, styles.lineBase, styles.firstLine)}></span>
-      <span style={Object.assign({}, styles.lineBase, styles.secondLine)}></span>
-      <span style={Object.assign({}, styles.lineBase, styles.thirdLine)}></span>
+      <span style={{ ...styles.lineBase, ...styles.firstLine }}></span>
+      <span style={{ ...styles.lineBase, ...styles.secondLine }}></span>
+      <span style={{ ...styles.lineBase, ...styles.thirdLine }}></span>
     </div>
   );
 }

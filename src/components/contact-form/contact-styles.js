@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledInput = styled.input`
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
+  padding-left: 0;
   border: none; /* Delete border */
   border-bottom: 2px solid black; /* Add a bottom border */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -18,6 +19,7 @@ export const StyledInput = styled.input`
 export const StyledText = styled.textarea`
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
+  padding-left: 0;
   border: none; /* Delete border */
   border-bottom: 2px solid black; /* Add a bottom border */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -30,6 +32,7 @@ export const StyledText = styled.textarea`
 export const StyledLabel = styled.label`
   font-weight: bold; /* set a bold font */
   padding-bottom: 8px; /* add a padding-bottom */
+  visibility: hidden;
 `;
 
 export const StyledH1 = styled.h1`
@@ -55,10 +58,14 @@ export const StyledSubmit = styled.button`
   float: right; /* align a button to the right */
   cursor: pointer; /* change a cursor look */
   text-transform: uppercase;
+  margin-bottom: 8rem;
   :hover {
     background-color: white; /* change a button background when cursor hovered over the button */
     color: black; /* change a font color when cursor hovered over the button */
     border: 2px solid black; /* add a border when cursor hovered over the button */
+  }
+  @media only screen and (max-device-width: 1024px) {
+    margin-bottom: 24rem;
   }
 `;
 

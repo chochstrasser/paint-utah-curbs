@@ -42,6 +42,7 @@ const useFormValidation = initialState => {
     });
     const validationErrors = validate(values);
     setErrors(validationErrors);
+    setDisable("");
   };
 
   const handleBlur = event => {
@@ -51,6 +52,7 @@ const useFormValidation = initialState => {
     });
     const validationErrors = validate(values);
     setErrors(validationErrors);
+    setDisable("");
   };
 
   const handleOnClick = () => {
