@@ -22,10 +22,11 @@ const ContactForm = () => {
       <StyledForm className={sent && "formDisable"}>
         <StyledH1>Have a question?</StyledH1>
         <StyledH3>Send us any questions or concerns from our contact us form, and we will get back to you as soon as we can!</StyledH3>
-        <StyledLabel>Name</StyledLabel>
+        <StyledLabel htmlFor="name">Name</StyledLabel>
         <StyledInput
           type="text"
           placeholder="Name"
+          id="name"
           name="name"
           onBlur={handleBlur}
           value={values.name}
@@ -34,10 +35,11 @@ const ContactForm = () => {
           required
         />
         {errors.name && touch.name && <div className="error-text">{errors.name}</div>}
-        <StyledLabel>Email Address</StyledLabel>
+        <StyledLabel htmlFor="email">Email Address</StyledLabel>
         <StyledInput
           type="email"
           placeholder="Email Address"
+          id="email"
           name="email"
           onBlur={handleBlur}
           value={values.email}

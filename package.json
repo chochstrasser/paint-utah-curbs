@@ -1,15 +1,15 @@
 {
   "name": "paintutahcurbs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-router-hash-link": "^1.2.2",
-    "react-scripts": "3.0.1",
-    "styled-components": "^4.3.2"
+    "react-scripts": "3.3.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,6 +33,8 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^2.0.1"
+    "@testing-library/react": "^9.4.0",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "react-test-renderer": "^16.12.0"
   }
 }
