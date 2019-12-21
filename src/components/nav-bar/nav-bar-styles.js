@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const Navigation = styled.div`
   position: fixed;
@@ -52,7 +53,13 @@ export const StyledNav = styled.nav`
     order: 3;
     display: ${props => (props.collapse ? "block" : "none")};
     align-self: flex-end;
+    margin-right: 0;
+    box-shadow: 0px -6px 0px 0px #a2a2a2;
   }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 export const StyledBurger = styled.div`
@@ -67,7 +74,11 @@ export const StyledBurger = styled.div`
   }
 `;
 
-export const StyledUl = styled.ul``;
+export const StyledUl = styled.ul`
+  padding: 0
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 0px #a2a2a2;
+`;
 
 export const StyledLi = styled.li`
   list-style-type: none;
@@ -76,6 +87,9 @@ export const StyledLi = styled.li`
   margin: 0 5px;
   color: black;
   text-transform: uppercase;
+  transition: box-shadow 0.3s linear;
+  box-shadow: 0px 0px 0px 0px #a2a2a2;
+  border-radius: 8px;
 
   @media only screen and (max-width: 1024px) {
     display: ${props => (props.collapse ? "none" : "block")};
@@ -84,19 +98,13 @@ export const StyledLi = styled.li`
     padding: 10px 0px;
     font-size: 1.3rem;
     text-decoration: none;
+    border: 1px solid #a2a2a2;
+    margin-bottom: 14px;
   }
 
-  :active {
-    background-color: black;
-    color: white;
-  }
-
-  :focus {
-    background-color: black;
-    color: white;
-  }
-  :hover {
-    background-color: black;
-    color: white;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 10px 8px -5px #a2a2a2;
   }
 `;

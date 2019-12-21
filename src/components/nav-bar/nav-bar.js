@@ -1,6 +1,5 @@
 import React from "react";
-import { StyledBold, Logo, Navigation, StyledNav, StyledUl, StyledLi, Container, StyledBurger } from "./nav-bar-styles";
-import { HashLink as Link } from "react-router-hash-link";
+import { StyledBold, Logo, Navigation, StyledNav, StyledLink, StyledUl, StyledLi, Container, StyledBurger } from "./nav-bar-styles";
 import HamburgerMenu from "./burger-icon";
 import useBurgerMenu from "./useBurgerMenu";
 
@@ -24,15 +23,15 @@ const NavBar = () => {
         </Logo>
         <StyledNav collapse={isOpen}>
           <StyledUl>
-            <Link to="/#welcome" scroll={el => scrollWithOffset(el, 50)}>
+            <StyledLink to="/#welcome" scroll={el => scrollWithOffset(el, 50)}>
               <StyledLi onClick={handleSelect}>Home</StyledLi>
-            </Link>
-            <Link to="/#benefits" scroll={el => scrollWithOffset(el, 50)}>
+            </StyledLink>
+            <StyledLink to="/#benefits" scroll={el => scrollWithOffset(el, 50)}>
               <StyledLi onClick={handleSelect}>Benefits</StyledLi>
-            </Link>
-            <Link to="/#contact" scroll={el => scrollWithOffset(el, 50)}>
+            </StyledLink>
+            <StyledLink to="/#contact" scroll={el => scrollWithOffset(el, 50)}>
               <StyledLi onClick={handleSelect}>Contact</StyledLi>
-            </Link>
+            </StyledLink>
           </StyledUl>
         </StyledNav>
         <StyledBurger>
@@ -40,8 +39,8 @@ const NavBar = () => {
             isOpen={isOpen}
             menuClicked={handleClick}
             width={20}
-            height={18}
-            strokeWidth={1}
+            height={14}
+            strokeWidth={3}
             rotate={0}
             color="black"
             borderRadius={0}
